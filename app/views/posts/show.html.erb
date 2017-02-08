@@ -1,0 +1,6 @@
+<h1>Show page</h1>
+
+<p><%= @post.post_text %></p>
+<% @post.categories.each do |c| %>
+  <li><%= link_to "#{c[:name]}", category_path[c[:id]] %></li>  
+<% end %>
