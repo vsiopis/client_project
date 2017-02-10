@@ -1,0 +1,10 @@
+<ul class="categories-list">
+  <strong>Categories: </strong>
+  <% if post.categories.count == 0 %>
+    <i>The post doen't belong in any category.</i>
+  <% else %>
+    <% post.categories.each do |c| %>
+      <li class='categories'> <%= link_to "##{c[:name]}", category_path(c[:id])%> </li>
+    <% end %>
+  <% end %>
+</ul>

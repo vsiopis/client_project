@@ -1,0 +1,3 @@
+<p class="post-text">
+<%=  truncate("#{post.post_text}", length: 500) { link_to "Continue", post_path(post.id) } %>
+</p>

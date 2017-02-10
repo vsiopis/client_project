@@ -1,6 +1,19 @@
-<h1>Show page</h1>
-
-<p><%= @post.post_text %></p>
-<% @post.categories.each do |c| %>
-  <li><%= link_to "#{c[:name]}", category_path[c[:id]] %></li>  
-<% end %>
+<%= render 'layouts/sidebar' %> 
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p class="post-text">
+      <%= @post.post_text %>
+      </p>
+      <%= render 'layouts/categories', post: @post %>
+    </div>
+    <div class="panel-footer">
+      <div class="time-ago">
+        <i>post created 
+          <%= time_ago_in_words(@post.created_at) %> 
+          ago
+        </i>
+      </div>
+    </div>
+  </div>
+</div>

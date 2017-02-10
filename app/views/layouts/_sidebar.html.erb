@@ -1,0 +1,8 @@
+<div class="col-sm-3 col-md-2 sidebar">
+  <ul class="nav nav-sidebar">
+    <li><a href="/">All Categories</a></li>
+    <% @categories.each do |c| %>
+      <li><%= link_to "#{c.name}", category_path(c.id) %></li> 
+    <% end %>
+  </ul>
+</div>

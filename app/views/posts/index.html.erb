@@ -1,5 +1,29 @@
-<h1>Posts Page</h1>
+<h2 class="head">Posts Page</h2>
+<div class="panel-groud">
+  <% @posts.each do |post| %>
+    <div class="panel panel-defaul">
+      <div class="panel-body">
+        <p id="post-text">
+        <%=  truncate("#{post.post_text}", length: 500) { link_to "Continue", post_path(post.id) } %>
+        </p>
+      </div>
+      <div class="panel-footer">
+        <strong>Categories: </strong>
+        <% if post.categories.count == 0 %>
+          <i>The post doen't belong in any category.</i>
+        <% else %>
+          <% post.categories.each do |c| %>
+            <li class='categories-list'> <%= link_to "#{c[:name]}", category_path(c[:id])%> </li>
+          <% end %>
+        <% end %>
+        <div class="time-ago">
+          <i>post created 
+            <%= time_ago_in_words(post.created_at) %> 
+            ago
+          </i>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-<% @posts.each do |post| %>
-  <li><%= link_to "#{post.post_text}", post_path(post.id) %></li>
-<% end %>
