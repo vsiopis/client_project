@@ -1,6 +1,9 @@
-<%= render 'layouts/sidebar' %> 
+<%= render 'layouts/sidebar', current_category: -1 %> 
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2><%= @post.title %></h3>
+    </div>
     <div class="panel-body">
       <p class="post-text">
       <%= @post.post_text %>

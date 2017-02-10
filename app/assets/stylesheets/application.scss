@@ -8,6 +8,15 @@ body {
   border: 0;
 }
 
+.footer {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
 /* Hide for mobile, show later */
 .sidebar {
   position: fixed;
@@ -51,10 +60,55 @@ ul.categories-list {
 .categories {
   display: inline;
   margin: 5px;
-  
+
+}
+.panel-group {
+  height: 630px;
 }
 
 .post-text {
   text-indent: 50px;
   text-transform: capitalize;
+}
+
+.panel {
+  margin: 15px !important;
+}
+
+.panel-heading {
+  background: #666 !important;
+  color: white !important;
+  h2 {
+    text-align: center;
+  }
+  h4 {
+    margin: 0;
+  }
+}
+
+
+li.active {
+  background: #333 !important;
+  a {
+    color: #fff !important;
+  }
+
+}
+
+li a{
+    transition: background 1.2s !important;
+    color: #333;
+}
+li:hover {
+  a {
+    transition: background 0.5s !important;
+    background: gray !important;
+    color: white !important;
+  }
+}
+
+.about {
+  padding: 50px;
+  height: 630px;
+  background: #eee;
 }
