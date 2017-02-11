@@ -1,0 +1,46 @@
+../
+client_project/
+| .git/
+| app/
+| | assets/
+| | | config/
+| | | images/
+| | | javascripts/
+| | | stylesheets/
+| | | | application.scss
+| | | | categories.scss
+| | | | custom.scss.css
+| | | | pages.scss
+| | | | posts.scss
+| | channels/
+| | controllers/
+| | | concerns/
+| | | application_controller.rb
+| | | categories_controller.rb
+| | | pages_controller.rb
+| | | posts_controller.rb
+| | helpers/
+| | | application_helper.rb
+| | | categories_helper.rb
+| | | pages_helper.rb
+| | | posts_helper.rb
+| | jobs/
+| | mailers/
+| | models/
+| | views/
+| bin/
+| config/
+| db/
+| lib/
+| log/
+| public/
+| test/
+| tmp/
+| vendor/
+| .gitignore
+| Gemfile
+| Gemfile.lock
+| NetrwTreeListing 5
+| README.md
+| Rakefile
+| config.ru

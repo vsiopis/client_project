@@ -60,6 +60,12 @@ ul.categories-list {
 .categories {
   display: inline;
   margin: 5px;
+  a {
+    padding: 1.5px 3px !important;
+    border-radius: 3px;
+    text-decoration: none;
+
+  }
 
 }
 .panel-group {
